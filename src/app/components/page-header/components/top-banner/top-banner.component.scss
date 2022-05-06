@@ -1,0 +1,34 @@
+@import 'src/assets/scss/core/functions';
+@import "src/assets/scss/core/breakpoints";
+@import "src/assets/scss/core/mixins";
+@import "src/assets/scss/settings";
+
+.top-banner {
+  background-color: var(--color-bg-secondary);
+
+  &__content {
+    @include container();
+
+    position: relative;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__link {
+    position: absolute;
+    right: var(--container-padding-x);
+    display: none;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--color-text-primary-inverse);
+
+    @include media-breakpoint-up(lg) {
+      margin-left: auto;
+      display: inline-block;
+    }
+  }
+}

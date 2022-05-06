@@ -8,7 +8,7 @@
 
 //background
 :root {
-  --color-bg-primary: rgba(0, 0, 0, 2%);
+  --color-bg-primary: rgba(0, 0, 0, 0.2);
   --color-bg-secondary: #454F5B;
   --color-bg-accent: #4295E4;
   --color-bg-accent-light: #F2F8FF;
@@ -25,6 +25,12 @@
   --color-button-primary: #4295E4;
   --color-button-primary-hover: #56A9F8;
   --color-button-primary-active: #2E81D0;
+}
+
+//container
+
+:root {
+  --container-padding-x: 15px;
 }
 
 // fonts
@@ -44,6 +50,3 @@ $grid-breakpoints: (
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 @include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
 
-// Container padding
-
-$container-padding-x: 15px;

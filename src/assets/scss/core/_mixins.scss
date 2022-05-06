@@ -26,9 +26,8 @@
 @mixin container {
   margin-right: auto;
   margin-left: auto;
-  padding-right: $container-padding-x;
-  padding-left: $container-padding-x;
-  //max-width: 1135px;
+  padding-right: var(--container-padding-x);
+  padding-left: var(--container-padding-x);
   max-width: 1240px;
 }
 
