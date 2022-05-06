@@ -1,0 +1,27 @@
+// text
+:root {
+  --color-text: #454f5b;
+  --color-text-accent: #161c24;
+  --color-text-no-active: #a4a4a4;
+}
+
+// fonts
+:root {
+  --font-title: "PT Sans", -apple-system, BlinkMacSystemFont, "Ubuntu", "Droid Sans", "Helvetica Neue", "Arial", sans-serif;
+  --font-text: "Roboto", -apple-system, BlinkMacSystemFont, "Ubuntu", "Droid Sans", "Helvetica Neue", "Arial", sans-serif;
+}
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+) !default;
+
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
+
+// Container padding
+
+$container-padding-x: 15px;
