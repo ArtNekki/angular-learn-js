@@ -1,8 +1,30 @@
 // text
 :root {
-  --color-text: #454f5b;
-  --color-text-accent: #161c24;
-  --color-text-no-active: #a4a4a4;
+  --color-text-primary: #454f5b;
+  --color-text-primary-inverse: #ffffff;
+  --color-text-secondary: #161c24;
+  --color-text-disable: #a4a4a4;
+}
+
+//background
+:root {
+  --color-bg-primary: rgba(0, 0, 0, 2%);
+  --color-bg-secondary: #454F5B;
+  --color-bg-accent: #4295E4;
+  --color-bg-accent-light: #F2F8FF;
+  --color-bg-footer: #0D2436;
+}
+
+//stroke
+:root {
+  --color-stroke: #EAEAEA;
+}
+
+//buttons
+:root {
+  --color-button-primary: #4295E4;
+  --color-button-primary-hover: #56A9F8;
+  --color-button-primary-active: #2E81D0;
 }
 
 // fonts
