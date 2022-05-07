@@ -2,12 +2,12 @@
   <div class="nav-dropdown__aside">
     <ul class="nav-dropdown__menu">
       <li *ngFor="let item of nav">
-        <a href="">{{item.name}}</a>
+        <a href="" (mouseenter)="changeImage(item.id)">{{item.name}}</a>
       </li>
     </ul>
     <app-button>Смотреть все</app-button>
   </div>
   <div class="nav-dropdown__image">
-    <app-image src="{{imagesPath}}/img-1" width="350px" height="300px"></app-image>
+    <app-image [src]="imagesPath + '/' + currentImageId" width="350px" height="300px"></app-image>
   </div>
 </div>

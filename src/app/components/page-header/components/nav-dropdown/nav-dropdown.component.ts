@@ -8,7 +8,13 @@ import {Component, Input, OnInit} from '@angular/core';
 export class NavDropdownComponent {
   @Input() nav!: Array<any>;
 
-  imagesPath = "assets/images/components/page-header/components/nav-dropdown/images";
+  currentImageId = 'img-1';
+
+  imagesPath = "/assets/images/components/page-header/components/nav-dropdown/images";
 
   constructor() { }
+
+  changeImage(id: string) {
+    this.currentImageId = id;
+  }
 }
