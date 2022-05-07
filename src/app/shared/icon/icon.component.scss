@@ -20,16 +20,21 @@
   }
 
   &_size_md {
+    width: 24px;
+    height: 24px;
+  }
+
+  &_size_lg {
     width: 26px;
     height: 26px;
   }
 
-  &_size_lg {
+  &_size_xl {
     width: 32px;
     height: 32px;
   }
 
-  &_size_xl {
+  &_size_2xl {
     width: 82px;
     height: 82px;
   }

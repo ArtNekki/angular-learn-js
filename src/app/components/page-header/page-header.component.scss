@@ -11,9 +11,15 @@
 
     min-height: 82px;
     display: grid;
-    grid-template-columns: 126px 1fr auto repeat(2, 32px);
-    column-gap: 24px;
+    grid-template-columns: 1fr 32px 32px;
+    justify-items: start;
     align-items: center;
+    column-gap: 16px;
+
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: 126px 1fr auto repeat(2, 32px);
+      column-gap: 24px;
+    }
   }
 
   &__logo {
@@ -25,12 +31,16 @@
   }
 
   &__open {
+    @include btn-default();
+
     @include media-breakpoint-up(lg) {
       display: none;
     }
   }
 
   &__close {
+    @include btn-default();
+
     @include media-breakpoint-up(lg) {
       display: none;
     }
@@ -38,9 +48,13 @@
 
   &__contact {
     margin-right: 6px;
-    display: flex;
+    display: none;
     align-items: center;
     column-gap: 8px;
+
+    @include media-breakpoint-up(lg) {
+      display: flex;
+    }
 
     a {
       font-size: 18px;

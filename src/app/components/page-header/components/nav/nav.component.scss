@@ -3,6 +3,14 @@
 @import "src/assets/scss/core/mixins";
 @import "src/assets/scss/settings";
 
+:host {
+  display: none;
+
+  @include media-breakpoint-up(lg) {
+    display: block;
+  }
+}
+
 .nav {
   @include list-clear();
 

@@ -4,18 +4,21 @@
     <a href="" class="page-header__logo">
       <app-icon name="header-logo"></app-icon>
     </a>
-    <button type="button" class="page-header__open">
-      <app-icon name="burger" size="sm"></app-icon>
+    <button *ngIf="mobileNavOpened; else burger" type="button" class="page-header__close" (click)="toggleMobileMenu(false)">
+      <app-icon name="close" size="md"></app-icon>
     </button>
-    <button type="button" class="page-header__close">
-      <app-icon name="close" size="sm"></app-icon>
-    </button>
+    <ng-template #burger>
+      <button type="button" class="page-header__open" (click)="toggleMobileMenu(true)">
+        <app-icon name="burger" size="md"></app-icon>
+      </button>
+    </ng-template>
     <app-nav></app-nav>
     <div class="page-header__contact">
       <app-icon name="phone" size="sm" color="blue"></app-icon>
       <a href="tel: 89510277322">+79510277322</a>
     </div>
-    <app-icon name="heart" size="lg" color="gray"></app-icon>
-    <app-icon name="cart" size="lg" color="gray"></app-icon>
+    <app-icon  name="heart" size="lg" color="gray"></app-icon>
+    <app-icon  name="cart" size="lg" color="gray"></app-icon>
   </nav>
+  <app-mobile-nav *ngIf="mobileNavOpened"></app-mobile-nav>
 </header>

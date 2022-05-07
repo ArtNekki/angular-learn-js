@@ -1,0 +1,28 @@
+<div class="mobile-nav">
+  <ul class="mobile-nav__list">
+    <li *ngFor="let item of nav" class="mobile-nav__item" (click)="toggleDropdown(item)"
+        [class.mobile-nav__item_state_opened]="activeItem === item">
+      <span *ngIf="item.dropdown; else link" class="mobile-nav__link">
+        <div>{{item.name}}</div>
+        <app-icon name="caret-down" size="xs"></app-icon>
+      </span>
+      <ng-template #link>
+        <a href="" class="mobile-nav__link">{{item.name}}</a>
+      </ng-template>
+      <div *ngIf="item.dropdown  && activeItem === item" class="mobile-nav__dropdown">
+        <ul class="mobile-nav__list mobile-nav__list_lvl_2">
+          <li class="mobile-nav__item" *ngFor="let item of item.dropdown">
+            <a href="" class="mobile-nav__link">{{item.name}}</a>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+  <div class="mobile-nav__footer">
+    <div class="mobile-nav__contact">
+      <app-icon name="phone" size="sm" color="blue"></app-icon>
+      <span>+79510277322</span>
+    </div>
+    <a href="tel: 89510277322">Обратный звонок</a>
+  </div>
+</div>
