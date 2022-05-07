@@ -1,1 +1,16 @@
-<p>nav works!</p>
+<ul class="nav">
+  <li *ngFor="let item of nav" class="nav__item" (mouseenter)="showDropdown(item)">
+    <span *ngIf="item.dropdown; else link" class="nav__link nav__link_type_dropdown">
+      <div style="margin-right: 5px;">{{item.name}}</div>
+      <app-icon name="caret-down" size="xs"></app-icon>
+    </span>
+    <ng-template #link>
+      <a href="" class="nav__link">{{item.name}}</a>
+    </ng-template>
+    <div *ngIf="item.dropdown && activeItem === item" class="nav__dropdown">
+      <app-nav-dropdown [nav]="item.dropdown"></app-nav-dropdown>
+    </div>
+  </li>
+</ul>
+
+<div *ngIf="activeItem" class="nav-backdrop" (mouseenter)="closeDropdown()"></div>

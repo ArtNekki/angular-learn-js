@@ -31,7 +31,17 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "src/app/shared/icon/images",
+                "output": "/assets/images/icons"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/app/components/page-header/components/nav-dropdown/images",
+                "output": "/assets/images/components/page-header/components/nav-dropdown/images"
+              }
             ],
             "styles": [
               "src/styles.scss"

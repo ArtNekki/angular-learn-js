@@ -1,8 +1,17 @@
 .icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-repeat: no-repeat;
 
-  &_size_xs {
+  &_size_2xs {
     width: 12px;
     height: 12px;
+  }
+
+  &_size_xs {
+    width: 14px;
+    height: 14px;
   }
 
   &_size_sm {
@@ -23,5 +32,43 @@
   &_size_xl {
     width: 82px;
     height: 82px;
+  }
+
+  &_name_burger {
+    background-image: url("/assets/images/icons/burger.svg");
+  }
+
+  &_name_caret-down {
+    background-image: url("/assets/images/icons/caret-down.svg");
+  }
+
+  &_name_cart {
+    background-image: url("/assets/images/icons/cart.svg");
+  }
+
+  &_name_close {
+    background-image: url("/assets/images/icons/close.svg");
+  }
+
+  &_name_heart {
+    background-image: url("/assets/images/icons/heart.svg");
+  }
+
+  &_name_phone {
+    mask-image: url("/assets/images/icons/phone.svg");
+  }
+
+  &_name_header-logo {
+    width: 51px;
+    height: 42px;
+    background-image: url("/assets/images/icons/logo.svg");
+  }
+
+  &_color_blue {
+    background-color: var(--color-bg-accent);
+  }
+
+  &_color_gray {
+
   }
 }
