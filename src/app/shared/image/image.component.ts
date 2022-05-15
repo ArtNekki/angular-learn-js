@@ -13,7 +13,7 @@ interface Breakpoints {
   styleUrls: ['./image.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ImageComponent implements OnInit {
+export class ImageComponent {
   @Input() width!: string;
   @Input() height!: string;
   @Input() maxWidth!: string;
@@ -22,10 +22,8 @@ export class ImageComponent implements OnInit {
   @Input() alt!: string;
   @Input() breakpoints!: Breakpoints;
 
-
-  constructor() { }
-
-  ngOnInit(): void {
+  formatSrc(src: string, breakpoint?: string,  ext: string = 'jpg') {
+    return breakpoint ? `${src}--${breakpoint}.${ext} 1x, ${src}--${breakpoint}@2x.${ext} 2x, ${src}--${breakpoint}@3x.${ext} 3x` :
+      `${src}.${ext} 1x, ${src}@2x.${ext} 2x, ${src}@3x.${ext} 3x`
   }
-
 }

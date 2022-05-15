@@ -1,10 +1,10 @@
 <picture *ngIf="breakpoints; else simple">
-  <source *ngIf="breakpoints.xl" media="(min-width: 1200px)" srcset="{{src}}--xl.{{ext}} 1x, {{src}}--xl@2x.{{ext}} 2x, {{src}}--xl@3x.{{ext}} 3x">
-  <source *ngIf="breakpoints.lg" media="(min-width: 992px)" srcset="{{src}}--lg.{{ext}} 1x, {{src}}--lg@2x.{{ext}} 2x, {{src}}--lg@3x.{{ext}} 3x">
-  <source *ngIf="breakpoints.md" media="(min-width: 768px)" srcset="{{src}}--md.{{ext}} 1x, {{src}}--md@2x.{{ext}} 2x, {{src}}--md@3x.{{ext}} 3x">
-  <source *ngIf="breakpoints.sm" media="(min-width: 576px)" srcset="{{src}}--sm.{{ext}} 1x, {{src}}--sm@2x.{{ext}} 2x, {{src}}--sm@3x.{{ext}} 3x">
-  <img src="{{src}}--xs.{{ext}}" srcset="{{src}}--xs@2x.{{ext}} 2x, {{src}}--xs@3x.{{ext}} 3x" [attr.width]="width" [attr.height]="height"  [style.maxWidth]="maxWidth" [attr.alt]="alt">
+  <source *ngIf="breakpoints.xl" media="(min-width: 1200px)" [srcset]="formatSrc(src, 'xl')">
+  <source *ngIf="breakpoints.lg" media="(min-width: 992px)" [srcset]="formatSrc(src, 'lg')">
+  <source *ngIf="breakpoints.md" media="(min-width: 768px)" [srcset]="formatSrc(src, 'md')">
+  <source *ngIf="breakpoints.sm" media="(min-width: 576px)" [srcset]="formatSrc(src, 'sm')">
+  <img [src]="src +'.' + ext" [srcset]="formatSrc(src, 'xs')" [attr.width]="width" [attr.height]="height"  [style.maxWidth]="maxWidth" [attr.alt]="alt">
 </picture>
 <ng-template #simple>
-  <img src="{{src}}.{{ext}}" srcset="{{src}}@2x.{{ext}} 2x, {{src}}@3x.{{ext}} 3x" [attr.width]="width" [attr.height]="height"  [style.maxWidth]="maxWidth" [attr.alt]="alt">
+  <img [src]="src +'.' + ext" [srcset]="formatSrc(src)" [attr.width]="width" [attr.height]="height"  [style.maxWidth]="maxWidth" [attr.alt]="alt">
 </ng-template>
