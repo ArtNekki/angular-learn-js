@@ -3,7 +3,6 @@
     <ul class="nav-dropdown__menu">
       <li *ngFor="let item of list">
 <!--        это ссылка на будущее, сейчас некуда ссылаться-->
-        {{item | json}}
         <a href="#" (mouseenter)="changeImage(item.imgId)">{{item.name}}</a>
       </li>
     </ul>

@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import nav from '../../nav'
 import {NavItem} from "../../interfaces/navigation.interface";
 
 @Component({
   selector: 'app-mobile-nav',
   templateUrl: './mobile-nav.component.html',
-  styleUrls: ['./mobile-nav.component.scss']
+  styleUrls: ['./mobile-nav.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MobileNavComponent implements OnInit {
   nav: Array<NavItem> = nav;

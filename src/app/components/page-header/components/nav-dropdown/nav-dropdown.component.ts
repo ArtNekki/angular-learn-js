@@ -1,10 +1,11 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
 import {NavItem} from "../../interfaces/navigation.interface";
 
 @Component({
   selector: 'app-nav-dropdown',
   templateUrl: './nav-dropdown.component.html',
-  styleUrls: ['./nav-dropdown.component.scss']
+  styleUrls: ['./nav-dropdown.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavDropdownComponent {
   @Input() list!: Array<NavItem>;
