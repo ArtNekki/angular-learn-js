@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import nav from '../../nav'
-import {Nav} from "../../interfaces/nav.interface";
+import {NavItem} from "../../interfaces/navigation.interface";
 
 @Component({
   selector: 'app-mobile-nav',
@@ -8,15 +8,15 @@ import {Nav} from "../../interfaces/nav.interface";
   styleUrls: ['./mobile-nav.component.scss']
 })
 export class MobileNavComponent implements OnInit {
-  nav: Array<Nav> = nav;
-  activeItem!: Nav | null;
+  nav: Array<NavItem> = nav;
+  activeItem!: NavItem | null;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  toggleDropdown(item: Nav) {
+  toggleDropdown(item: NavItem) {
     if (!item.dropdown) {
       return;
     }

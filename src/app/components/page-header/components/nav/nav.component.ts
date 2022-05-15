@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import nav from '../../nav'
-import {Nav} from "../../interfaces/nav.interface";
+import {NavItem} from "../../interfaces/navigation.interface";
 
 @Component({
   selector: 'app-nav',
@@ -8,14 +8,14 @@ import {Nav} from "../../interfaces/nav.interface";
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
-  nav: Array<any> = nav;
-  activeItem!: Nav | null;
+  nav: Array<NavItem> = nav;
+  activeItem!: NavItem | null;
 
   constructor() { }
 
   ngOnInit(): void {}
 
-  showDropdown(item: Nav) {
+  showDropdown(item: NavItem) {
     this.activeItem = item.dropdown ? item : null;
   }
 
@@ -23,7 +23,7 @@ export class NavComponent implements OnInit {
     this.activeItem = null;
   }
 
-  isTargetDropdown(item: Nav) {
+  isTargetDropdown(item: NavItem) {
     return item.dropdown && this.activeItem === item;
   }
 }

@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Nav} from "../../interfaces/nav.interface";
+import {NavItem} from "../../interfaces/navigation.interface";
 
 @Component({
   selector: 'app-nav-dropdown',
@@ -7,9 +7,9 @@ import {Nav} from "../../interfaces/nav.interface";
   styleUrls: ['./nav-dropdown.component.scss']
 })
 export class NavDropdownComponent {
-  @Input() list!: Array<any>;
+  @Input() list!: Array<NavItem>;
 
-  currentImageId = 'img-1';
+  currentImageId: string | undefined = 'img-1';
 
   get imagePath() {
     return '/assets/images/content/main-nav/' + this.currentImageId;
@@ -17,8 +17,7 @@ export class NavDropdownComponent {
 
   constructor() { }
 
-  changeImage(id: string) {
-    console.log('nav', this.list);
+  changeImage(id?: string) {
     this.currentImageId = id;
   }
 }
