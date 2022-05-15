@@ -10,7 +10,7 @@
         <!-- это ссылка на будущее, сейчас некуда ссылаться-->
         <a href="#" class="mobile-nav__link">{{item.name}}</a>
       </ng-template>
-      <div *ngIf="item.dropdown  && activeItem === item" class="mobile-nav__dropdown">
+      <div *ngIf="isTargetDropdown(item)" class="mobile-nav__dropdown">
         <ul class="mobile-nav__list mobile-nav__list_lvl_2">
           <li class="mobile-nav__item" *ngFor="let item of item.dropdown">
             <a href="" class="mobile-nav__link">{{item.name}}</a>

@@ -8,7 +8,7 @@
       <!-- это ссылка на будущее, сейчас некуда ссылаться-->
       <a href="#" class="nav__link">{{item.name}}</a>
     </ng-template>
-    <div *ngIf="item.dropdown  && activeItem === item" class="nav__dropdown">
+    <div *ngIf="isTargetDropdown(item)" class="nav__dropdown">
       <app-nav-dropdown [list]="item.dropdown"></app-nav-dropdown>
     </div>
   </li>

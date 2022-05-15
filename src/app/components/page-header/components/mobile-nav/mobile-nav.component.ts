@@ -19,4 +19,8 @@ export class MobileNavComponent {
 
     this.activeItem = !this.activeItem ? item : null;
   }
+
+  isTargetDropdown(item: NavItem) {
+    return item.dropdown && this.activeItem === item;
+  }
 }

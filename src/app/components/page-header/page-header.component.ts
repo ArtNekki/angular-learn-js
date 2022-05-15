@@ -9,7 +9,7 @@ import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 export class PageHeaderComponent {
   mobileNavOpened = false;
 
-  toggleMobileMenu(isOpened: boolean) {
+  setMobileVisible(isOpened: boolean) {
     this.mobileNavOpened = isOpened;
   }
 }

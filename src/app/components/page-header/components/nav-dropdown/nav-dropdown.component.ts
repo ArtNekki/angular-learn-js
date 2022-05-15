@@ -8,7 +8,7 @@ import {NavItem} from "../../interfaces/navigation.interface";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavDropdownComponent {
-  @Input() list!: Array<NavItem>;
+  @Input() list?: Array<NavItem>;
 
   currentImageId: string | undefined = 'img-1';
 

@@ -4,11 +4,11 @@
     <a href="" class="page-header__logo">
       <app-icon name="header-logo"></app-icon>
     </a>
-    <button *ngIf="mobileNavOpened; else burger" type="button" class="page-header__close" (click)="toggleMobileMenu(false)">
+    <button *ngIf="mobileNavOpened; else burger" type="button" class="page-header__close" (click)="setMobileVisible(false)">
       <app-icon name="close" size="md"></app-icon>
     </button>
     <ng-template #burger>
-      <button type="button" class="page-header__open" (click)="toggleMobileMenu(true)">
+      <button type="button" class="page-header__open" (click)="setMobileVisible(true)">
         <app-icon name="burger" size="md"></app-icon>
       </button>
     </ng-template>
