@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import nav from '../../nav'
-import {Nav} from "../../interfaces/nav";
+import {Nav} from "../../interfaces/nav.interface";
 
 @Component({
   selector: 'app-nav',
@@ -8,7 +8,7 @@ import {Nav} from "../../interfaces/nav";
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
-  nav: Array<Nav> = nav;
+  nav: Array<any> = nav;
   activeItem!: Nav | null;
 
   constructor() { }
@@ -21,5 +21,9 @@ export class NavComponent implements OnInit {
 
   closeDropdown() {
     this.activeItem = null;
+  }
+
+  isTargetDropdown(item: Nav) {
+    return item.dropdown && this.activeItem === item;
   }
 }

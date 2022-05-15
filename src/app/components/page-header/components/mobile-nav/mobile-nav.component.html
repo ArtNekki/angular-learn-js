@@ -7,7 +7,8 @@
         <app-icon name="caret-down" size="xs"></app-icon>
       </span>
       <ng-template #link>
-        <a href="" class="mobile-nav__link">{{item.name}}</a>
+        <!-- это ссылка на будущее, сейчас некуда ссылаться-->
+        <a href="#" class="mobile-nav__link">{{item.name}}</a>
       </ng-template>
       <div *ngIf="item.dropdown  && activeItem === item" class="mobile-nav__dropdown">
         <ul class="mobile-nav__list mobile-nav__list_lvl_2">

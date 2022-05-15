@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import nav from '../../nav'
-import {Nav} from "../../interfaces/nav";
+import {Nav} from "../../interfaces/nav.interface";
 
 @Component({
   selector: 'app-mobile-nav',
