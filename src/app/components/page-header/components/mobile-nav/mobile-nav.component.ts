@@ -8,14 +8,9 @@ import {NavItem} from "../../interfaces/navigation.interface";
   styleUrls: ['./mobile-nav.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class MobileNavComponent implements OnInit {
+export class MobileNavComponent {
   nav: Array<NavItem> = nav;
   activeItem!: NavItem | null;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
   toggleDropdown(item: NavItem) {
     if (!item.dropdown) {

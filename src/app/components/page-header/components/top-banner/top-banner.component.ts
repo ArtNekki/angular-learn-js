@@ -6,11 +6,4 @@ import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
   styleUrls: ['./top-banner.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TopBannerComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
+export class TopBannerComponent {}

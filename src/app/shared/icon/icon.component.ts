@@ -6,14 +6,9 @@ import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./icon.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class IconComponent implements OnInit {
+export class IconComponent {
   @Input() name?: string;
   @Input() size?: string;
   @Input() color?: string;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

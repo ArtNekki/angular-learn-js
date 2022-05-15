@@ -8,13 +8,9 @@ import {NavItem} from "../../interfaces/navigation.interface";
   styleUrls: ['./nav.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NavComponent implements OnInit {
+export class NavComponent {
   nav: Array<NavItem> = nav;
   activeItem!: NavItem | null;
-
-  constructor() { }
-
-  ngOnInit(): void {}
 
   showDropdown(item: NavItem) {
     this.activeItem = item.dropdown ? item : null;

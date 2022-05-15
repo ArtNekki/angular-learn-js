@@ -16,8 +16,6 @@ export class NavDropdownComponent {
     return '/assets/images/content/main-nav/' + this.currentImageId;
   }
 
-  constructor() { }
-
   changeImage(id?: string) {
     this.currentImageId = id;
   }

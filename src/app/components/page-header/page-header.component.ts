@@ -6,13 +6,8 @@ import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
   styleUrls: ['./page-header.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class PageHeaderComponent implements OnInit {
+export class PageHeaderComponent {
   mobileNavOpened = false;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
   toggleMobileMenu(isOpened: boolean) {
     this.mobileNavOpened = isOpened;
