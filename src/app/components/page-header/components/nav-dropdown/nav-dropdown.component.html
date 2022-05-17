@@ -1,0 +1,14 @@
+<div class="nav-dropdown">
+  <div class="nav-dropdown__aside">
+    <ul class="nav-dropdown__menu">
+      <li *ngFor="let item of list">
+<!--        это ссылка на будущее, сейчас некуда ссылаться-->
+        <a href="#" (mouseenter)="changeImage(item.imgId)">{{item.name}}</a>
+      </li>
+    </ul>
+    <app-button>Смотреть все</app-button>
+  </div>
+  <div class="nav-dropdown__image">
+    <app-image [src]="imagePath" width="350px" height="300px"></app-image>
+  </div>
+</div>
