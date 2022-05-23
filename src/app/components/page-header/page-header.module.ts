@@ -7,16 +7,9 @@ import { TopBannerComponent } from './components/top-banner/top-banner.component
 import { NavDropdownComponent } from './components/nav-dropdown/nav-dropdown.component';
 import { MobileNavComponent } from './components/mobile-nav/mobile-nav.component';
 
-
-
 @NgModule({
-  declarations: [PageHeaderComponent, NavComponent, TopBannerComponent, NavDropdownComponent, MobileNavComponent],
-  imports: [
-    CommonModule,
-    SharedModule
-  ],
-  exports: [
-    PageHeaderComponent
-  ]
+	declarations: [PageHeaderComponent, NavComponent, TopBannerComponent, NavDropdownComponent, MobileNavComponent],
+	imports: [CommonModule, SharedModule],
+	exports: [PageHeaderComponent],
 })
-export class PageHeaderModule { }
+export class PageHeaderModule {}
