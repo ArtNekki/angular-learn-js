@@ -1,27 +1,32 @@
 .text {
-	&_size_xl {
+	&_size_2xl {
 		font-size: 44px;
 		line-height: 62px;
 	}
 
-	&_size_lg {
+	&_size_xl {
 		font-size: 32px;
 		line-height: 38px;
 	}
 
-	&_size_md {
+	&_size_lg {
 		font-size: 22px;
 		line-height: 34px;
 	}
 
-	&_size_sm {
+	&_size_md {
 		font-size: 20px;
 		line-height: 32px;
 	}
 
-	&_size_xs {
+	&_size_sm {
 		font-size: 16px;
 		line-height: 26px;
+	}
+
+	&_size_xs {
+		font-size: 14px;
+		line-height: 24px;
 	}
 
 	&_size_2xs {
@@ -45,5 +50,28 @@
 
 	&_weight_semi-bold {
 		font-weight: 600;
+	}
+
+	//<------------------------- Margin bottom -------------------------->
+	&_mgb_4 {
+		margin-bottom: 4px;
+	}
+
+	&_mgb_16 {
+		margin-bottom: 16px;
+	}
+
+	&_mgb_20 {
+		margin-bottom: 20px;
+	}
+
+	&_mgb_32 {
+		margin-bottom: 32px;
+	}
+
+	//<------------------------- Type -------------------------->
+
+	&_type_stroked {
+		text-decoration: line-through;
 	}
 }
