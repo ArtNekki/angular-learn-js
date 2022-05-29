@@ -1,0 +1,40 @@
+@import 'src/assets/scss/core/functions';
+@import 'src/assets/scss/core/breakpoints';
+@import 'src/assets/scss/core/mixins';
+@import 'src/assets/scss/settings';
+
+.products {
+	margin-top: 50px;
+
+	&__container {
+		@include container();
+
+		min-height: 500px;
+
+		.products_is_loading & {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	&__gallery {
+		display: grid;
+		grid-template-columns: 560px 1fr;
+		grid-column-gap: 25px;
+	}
+
+	&__img {
+		width: 500px;
+		height: 500px;
+	}
+
+	&__price {
+		margin-top: 15px;
+	}
+
+	&__button {
+		margin-top: 20px;
+		display: inline-block;
+	}
+}

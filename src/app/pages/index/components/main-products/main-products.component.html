@@ -1,0 +1,28 @@
+<section *appLet="(products$ | async) as products" class="products" [class.products_is_loading]="!products.length">
+  <div class="products__container">
+    <ng-container *ngIf="products.length; else loading">
+      <div *ngFor="let product of products" class="products__gallery">
+        <div class="products__img">
+          <img #image [src]="product.images[0].url" width="500" height="500" />
+        </div>
+        <div class="products__info">
+          <h2 class="text text_size_2xl text_mgb_sm">{{product.name}}</h2>
+          <p class="text text_size_xs">Замок дверной электронный Golden Soft GS-200Z-5 имеет роскошный глянцевый блеск, четкие линии, красивые формы.</p>
+          <p>Подходит для установки на деревянную/межкомнатную дверь.</p>
+
+          <div class="products__price">
+            <div class="text text_size_xs">Цена</div>
+            <b class="text text_size_lg text_display_ib text_mgb_16">{{product.price | currency: 'RUB':'symbol-narrow':'1.0':'ru'}}</b>
+            <!--        <span class="text text_size_lg text_type_stroked"></span>-->
+          </div>
+          <div class="products__button">
+            <app-button>Добавить в корзину</app-button>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+    <ng-template #loading>
+      <app-loader></app-loader>
+    </ng-template>
+  </div>
+</section>
