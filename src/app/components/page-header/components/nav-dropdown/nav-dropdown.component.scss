@@ -13,6 +13,7 @@
 	grid-template-columns: 343px 351px;
 	column-gap: 32px;
 	box-shadow: var(--box-shadow);
+	background: var(--color-bg-white);
 
 	.nav-dropdown__menu {
 		@include list-clear();
