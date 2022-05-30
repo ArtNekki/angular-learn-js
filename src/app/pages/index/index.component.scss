@@ -1,0 +1,31 @@
+@import 'src/assets/scss/core/functions';
+@import 'src/assets/scss/core/breakpoints';
+@import 'src/assets/scss/core/mixins';
+@import 'src/assets/scss/settings';
+
+.page-section_type_advantages {
+  margin-top: 53px;
+  margin-bottom: 93px;
+  padding: 40px 0;
+
+  .page-section__row {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-items: center;
+  }
+}
+
+.page-section_type_why {
+
+  .page-section__row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+  }
+
+  .page-section__col {
+    padding: 24px;
+    border-left: 1px solid var(--color-stroke);
+    border-right: 1px solid var(--color-stroke);
+  }
+}

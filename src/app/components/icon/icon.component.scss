@@ -69,6 +69,14 @@
 		background-image: url('/assets/images/icons/logo.svg');
 	}
 
+  &_name_evaluate {
+    background-image: url('/assets/images/icons/evaluate.svg');
+  }
+
+  &_name_product-return {
+    background-image: url('/assets/images/icons/product-return.svg');
+  }
+
 	&_color_blue {
 		background-color: var(--color-bg-accent);
 	}
