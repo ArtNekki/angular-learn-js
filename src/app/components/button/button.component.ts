@@ -8,4 +8,5 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
 })
 export class ButtonComponent {
 	@Input() type!: string;
+	@Input() href!: string;
 }

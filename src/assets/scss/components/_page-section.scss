@@ -1,15 +1,15 @@
 .page-section {
-  &_color_accent {
-    background-color: var(--color-bg-accent-light);
-  }
+	&_color_accent {
+		background-color: var(--color-bg-accent-light);
+	}
 
-  &__container {
-    @include container();
-  }
+	&__container {
+		@include container();
+	}
 
-  &__col {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
+	&__col {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
 }

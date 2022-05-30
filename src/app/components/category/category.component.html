@@ -1,0 +1,11 @@
+<article class="category">
+  <div class="category__image">
+    <app-image [src]="getImagePath(data.imgId)"></app-image>
+  </div>
+  <div class="category__overlay">
+    <div class="category__content">
+      <h1 class="text text_size_lg">{{data.name}}</h1>
+      <app-button type="button" [routerLink]="data.link">Перейти</app-button>
+    </div>
+  </div>
+</article>

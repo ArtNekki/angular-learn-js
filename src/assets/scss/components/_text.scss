@@ -1,5 +1,5 @@
 .text {
-  margin: 0;
+	margin: 0;
 
 	&_size_2xl {
 		font-size: 44px;
@@ -71,9 +71,9 @@
 		margin-bottom: 32px;
 	}
 
-  &_mgb_56 {
-    margin-bottom: 56px;
-  }
+	&_mgb_56 {
+		margin-bottom: 56px;
+	}
 
 	//<------------------------- Type -------------------------->
 
@@ -81,12 +81,9 @@
 		text-decoration: line-through;
 	}
 
-  //<------------------------- Align -------------------------->
+	//<------------------------- Align -------------------------->
 
-  &_align_center {
-    text-align: center;
-  }
+	&_align_center {
+		text-align: center;
+	}
 }
-
-
-

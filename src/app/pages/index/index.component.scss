@@ -4,28 +4,38 @@
 @import 'src/assets/scss/settings';
 
 .page-section_type_advantages {
-  margin-top: 53px;
-  margin-bottom: 93px;
-  padding: 40px 0;
+	margin-top: 53px;
+	margin-bottom: 93px;
+	padding: 40px 0;
 
-  .page-section__row {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    justify-items: center;
-  }
+	.page-section__row {
+		display: grid;
+		grid-template-columns: repeat(4, auto);
+		justify-items: center;
+	}
 }
 
 .page-section_type_why {
+	margin-bottom: 100px;
 
-  .page-section__row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 30px;
-  }
+	.page-section__row {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-column-gap: 30px;
+	}
 
-  .page-section__col {
-    padding: 24px;
-    border-left: 1px solid var(--color-stroke);
-    border-right: 1px solid var(--color-stroke);
-  }
+	.page-section__col {
+		padding: 24px;
+		border-left: 1px solid var(--color-stroke);
+		border-right: 1px solid var(--color-stroke);
+	}
+}
+
+.page-section_type_categories {
+	.page-section__row {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 40px;
+		align-content: stretch;
+	}
 }
