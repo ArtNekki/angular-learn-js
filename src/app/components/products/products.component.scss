@@ -1,0 +1,31 @@
+@import 'src/assets/scss/core/functions';
+@import 'src/assets/scss/core/breakpoints';
+@import 'src/assets/scss/core/mixins';
+@import 'src/assets/scss/settings';
+
+.products {
+  margin-top: 100px;
+
+  &__container {
+    @include container();
+
+    min-height: 200px;
+
+    .products_is_loading & {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 64px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+  }
+}

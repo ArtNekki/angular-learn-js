@@ -54,3 +54,5 @@
     </ng-template>
   </div>
 </div>
+<app-products  *appLet="(products$ | async) as products" title="Наши популярные продукты" [list]="products"></app-products>
+

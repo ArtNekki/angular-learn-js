@@ -8,6 +8,7 @@ import { CategoryModule } from 'src/app/components/category/category.module';
 import { LetModule } from 'src/app/shared/directives/let/let.module';
 import { LoaderModule } from 'src/app/components/loader/loader.module';
 import { ButtonModule } from '../../components/button/button.module';
+import { ProductsModule } from '../../components/products/products.module';
 
 @NgModule({
 	declarations: [IndexComponent],
@@ -20,6 +21,7 @@ import { ButtonModule } from '../../components/button/button.module';
 		LetModule,
 		LoaderModule,
 		ButtonModule,
+		ProductsModule,
 	],
 })
 export class IndexModule {}
