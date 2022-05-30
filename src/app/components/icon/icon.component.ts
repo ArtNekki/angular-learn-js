@@ -10,4 +10,12 @@ export class IconComponent {
 	@Input() name?: string;
 	@Input() size?: string;
 	@Input() color?: string;
+
+	setClass() {
+		return {
+			[`icon_size_${this.size}`]: this.size,
+			[`icon_name_${this.name}`]: this.name,
+			[`icon_color_${this.color}`]: this.color,
+		};
+	}
 }
