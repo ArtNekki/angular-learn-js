@@ -10,11 +10,12 @@ import { MapResponseInterceptor } from './shared/interceptors/map-response.inter
 
 import { registerLocaleData } from '@angular/common';
 import ruLocale from '@angular/common/locales/ru';
+import { PageFooterModule } from './components/page-footer/page-footer.module';
 registerLocaleData(ruLocale, 'ru');
 
 @NgModule({
 	declarations: [AppComponent],
-	imports: [BrowserModule, HttpClientModule, AppRoutingModule, PageHeaderModule],
+	imports: [BrowserModule, HttpClientModule, AppRoutingModule, PageHeaderModule, PageFooterModule],
 	providers: [
 		{
 			provide: HTTP_INTERCEPTORS,
