@@ -8,6 +8,10 @@ const routes: Routes = [
 		loadChildren: () => import('./pages/index/index.module').then((m) => m.IndexModule),
 	},
 	{
+		path: 'categories',
+		loadChildren: () => import('./pages/categories/categories.module').then((m) => m.CategoriesModule),
+	},
+	{
 		path: '**',
 		component: NotFoundComponent,
 	},

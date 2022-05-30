@@ -13,12 +13,12 @@ const Categories = [
 ];
 
 @Component({
-	selector: 'app-categories',
-	templateUrl: './categories.component.html',
-	styleUrls: ['./categories.component.scss'],
+	selector: 'app-categories-list',
+	templateUrl: './categories-list.component.html',
+	styleUrls: ['./categories-list.component.scss'],
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CategoriesComponent {
+export class CategoriesListComponent {
 	categories$: Observable<ICategory[]> = of(Categories).pipe(
 		map((arr: ICategory[]) => {
 			return arr.splice(0, 4);

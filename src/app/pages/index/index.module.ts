@@ -9,7 +9,7 @@ import { LetModule } from 'src/app/shared/directives/let/let.module';
 import { LoaderModule } from 'src/app/components/loader/loader.module';
 import { ButtonModule } from '../../components/button/button.module';
 import { ProductsModule } from '../../components/products/products.module';
-import { CategoriesModule } from 'src/app/components/categories/categories.module';
+import { CategoriesListModule } from '../../components/categories-list/categories-list.module';
 
 @NgModule({
 	declarations: [IndexComponent],
@@ -23,7 +23,7 @@ import { CategoriesModule } from 'src/app/components/categories/categories.modul
 		LoaderModule,
 		ButtonModule,
 		ProductsModule,
-		CategoriesModule,
+		CategoriesListModule,
 	],
 })
 export class IndexModule {}
