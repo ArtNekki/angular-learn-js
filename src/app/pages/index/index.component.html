@@ -40,19 +40,6 @@
     </div>
   </div>
 </div>
-<div class="page-section_type_categories">
-  <div *appLet="(categories$ | async) as categories" class="page-section__container">
-    <h2 class="text text_size_2xl text_align_center text_mgb_56">Категории</h2>
-    <div *ngIf="categories.length; else loading" class="page-section__row">
-      <app-category *ngFor="let category of categories" [data]="category"></app-category>
-    </div>
-    <div class="page-section__action">
-      <app-button type="button">Все категории</app-button>
-    </div>
-    <ng-template #loading>
-      <app-loader></app-loader>
-    </ng-template>
-  </div>
-</div>
+<app-categories></app-categories>
 <app-products  *appLet="(products$ | async) as products" title="Наши популярные продукты" [list]="products"></app-products>
 

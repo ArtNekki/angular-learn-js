@@ -9,6 +9,7 @@ import { LetModule } from 'src/app/shared/directives/let/let.module';
 import { LoaderModule } from 'src/app/components/loader/loader.module';
 import { ButtonModule } from '../../components/button/button.module';
 import { ProductsModule } from '../../components/products/products.module';
+import { CategoriesModule } from 'src/app/components/categories/categories.module';
 
 @NgModule({
 	declarations: [IndexComponent],
@@ -22,6 +23,7 @@ import { ProductsModule } from '../../components/products/products.module';
 		LoaderModule,
 		ButtonModule,
 		ProductsModule,
+		CategoriesModule,
 	],
 })
 export class IndexModule {}
