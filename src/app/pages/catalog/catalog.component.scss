@@ -4,43 +4,43 @@
 @import 'src/assets/scss/settings';
 
 .catalog {
-  margin-top: 50px;
-  margin-bottom: 70px;
+	margin-top: 50px;
+	margin-bottom: 70px;
 
-  &__content {
-    @include container();
+	&__content {
+		@include container();
 
-    display: grid;
-    grid-template-columns: 288px 1fr;
-    grid-column-gap: 25px;
-  }
+		display: grid;
+		grid-template-columns: 288px 1fr;
+		grid-column-gap: 25px;
+	}
 
-  &__toolbar {
-    margin-top: 40px;
-    margin-bottom: 60px;
-    grid-column: 1 / -1;
-    display: flex;
-    justify-content: space-between;
-  }
+	&__toolbar {
+		margin-top: 40px;
+		margin-bottom: 60px;
+		grid-column: 1 / -1;
+		display: flex;
+		justify-content: space-between;
+	}
 
-  h2 {
-    grid-column: 1 / -1;
-  }
+	h2 {
+		grid-column: 1 / -1;
+	}
 
-  &__filter {
-    background: var(--color-bg-accent-light);
-    min-height: 600px;
-  }
+	&__filter {
+		background: var(--color-bg-accent-light);
+		min-height: 600px;
+	}
 
-  &__main {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 25px;
+	&__main {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 25px;
 
-    &_is_loading {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  }
+		&_is_loading {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
 }
