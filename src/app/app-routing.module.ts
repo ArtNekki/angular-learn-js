@@ -12,6 +12,10 @@ const routes: Routes = [
 		loadChildren: () => import('./pages/categories/categories.module').then((m) => m.CategoriesModule),
 	},
 	{
+		path: 'catalog',
+		loadChildren: () => import('./pages/catalog/catalog.module').then((m) => m.CatalogModule),
+	},
+	{
 		path: '**',
 		component: NotFoundComponent,
 	},
