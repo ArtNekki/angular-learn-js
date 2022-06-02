@@ -1,6 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { IProduct } from 'src/app/shared/interfaces/product.interface';
-import { map, Observable } from 'rxjs';
+import { map, Observable, tap } from 'rxjs';
 import { ProductsService } from 'src/app/shared/services/products/products.service';
 
 @Component({

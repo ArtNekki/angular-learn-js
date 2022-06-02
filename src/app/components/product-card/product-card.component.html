@@ -1,4 +1,4 @@
-<article class="product-card">
+<article class="product-card" [routerLink]="['product', data._id]">
   <div class="product-card__image">
     <img [src]="data.images[0].url" alt="" width="268" height="300" >
   </div>
