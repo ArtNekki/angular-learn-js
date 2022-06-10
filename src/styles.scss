@@ -3,34 +3,34 @@
 /* You can add utils styles to this file, and also import other style files */
 
 @charset 'utf-8';
-@import "../node_modules/normalize.css/normalize.css";
+@import '../node_modules/normalize.css/normalize.css';
 
 //core
-@import "assets/scss/core/functions";
-@import "assets/scss/core/mixins";
-@import "assets/scss/core/utils";
-@import "assets/scss/core/breakpoints";
-@import "assets/scss/core/animations";
+@import 'assets/scss/core/functions';
+@import 'assets/scss/core/mixins';
+@import 'assets/scss/core/utils';
+@import 'assets/scss/core/breakpoints';
+@import 'assets/scss/core/animations';
 
 //settings
-@import "assets/scss/settings";
+@import 'assets/scss/settings';
 
 // @import 'global/typography';
-@import "assets/scss/core/fonts";
+@import 'assets/scss/core/fonts';
 
 html,
 body {
-  height: 100%;
-  font-family: var(--font-text);
-  font-size: 13px;
-  line-height: 14px;
-  color: var(--color-text-primary);
+	height: 100%;
+	font-family: var(--font-text);
+	font-size: 13px;
+	line-height: 14px;
+	color: var(--color-text-primary);
 }
 
 body {
-  touch-action: pan-x pan-y;
+	touch-action: pan-x pan-y;
 }
 
 //components
-@import "assets/scss/components/text";
-
+@import 'assets/scss/components/text';
+@import 'assets/scss/components/page-section';

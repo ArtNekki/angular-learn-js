@@ -1,50 +1,51 @@
 @import 'src/assets/scss/core/functions';
-@import "src/assets/scss/core/breakpoints";
-@import "src/assets/scss/core/mixins";
-@import "src/assets/scss/settings";
+@import 'src/assets/scss/core/breakpoints';
+@import 'src/assets/scss/core/mixins';
+@import 'src/assets/scss/settings';
 
 .nav-dropdown {
-  position: absolute;
-  top: 54px;
-  left: 0;
-  z-index: 1;
-  padding: 32px;
-  display: grid;
-  grid-template-columns: 343px 351px;
-  column-gap: 32px;
-  box-shadow: var(--box-shadow);
+	position: absolute;
+	top: 54px;
+	left: 0;
+	z-index: 1;
+	padding: 32px;
+	display: grid;
+	grid-template-columns: 343px 351px;
+	column-gap: 32px;
+	box-shadow: var(--box-shadow);
+	background: var(--color-bg-white);
 
-  .nav-dropdown__menu {
-    @include list-clear();
+	.nav-dropdown__menu {
+		@include list-clear();
 
-    a {
-      position: relative;
-      margin-bottom: 16px;
-      display: inline-block;
-      font-size: 16px;
-      line-height: 26px;
-      color: var(--color-text-primary);
-      text-decoration: none;
+		a {
+			position: relative;
+			margin-bottom: 16px;
+			display: inline-block;
+			font-size: 16px;
+			line-height: 26px;
+			color: var(--color-text-primary);
+			text-decoration: none;
 
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        opacity: 0;
-        background-color: var(--color-bg-accent);
-        transition: opacity 0.25s ease-in;
-      }
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 1px;
+				opacity: 0;
+				background-color: var(--color-bg-accent);
+				transition: opacity 0.25s ease-in;
+			}
 
-      &:hover::after {
-        opacity: 1;
-      }
-    }
-  }
+			&:hover::after {
+				opacity: 1;
+			}
+		}
+	}
 
-  &__image {
-    align-self: center;
-  }
+	&__image {
+		align-self: center;
+	}
 }

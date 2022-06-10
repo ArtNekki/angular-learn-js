@@ -1,0 +1,45 @@
+<app-main-products></app-main-products>
+<div class="page-section page-section_color_accent page-section_type_advantages">
+  <div class="page-section__container">
+    <div class="page-section__row">
+      <div class="page-section__col">
+        <b class="text text_size_xl">5,567</b>
+        <small class="text text_size_sm">Счастливых клиентов</small>
+      </div>
+      <div class="page-section__col">
+        <b class="text text_size_xl">1245</b>
+        <small class="text text_size_sm">Продуктов на выбор</small>
+      </div>
+      <div class="page-section__col">
+        <b class="text text_size_xl">372</b>
+        <small class="text text_size_sm">Продаж в день</small>
+      </div>
+      <div class="page-section__col">
+        <b class="text text_size_xl">20</b>
+        <small class="text text_size_sm">Лет на рынке</small>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-section page-section_type_why">
+  <div class="page-section__container">
+    <h2 class="text text_size_2xl text_align_center text_mgb_56">Почему GoldenService?</h2>
+    <div class="page-section__row">
+      <div class="page-section__col">
+        <app-icon name="product-return" size="2xl"></app-icon>
+        <p class="text text_size_md">Возврат удвоенной стоимости каждого замка в случае брака.</p>
+      </div>
+      <div class="page-section__col">
+        <app-icon name="evaluate" size="2xl"></app-icon>
+        <p class="text text_size_md">Наносим ваш логотип компании на наш продукт</p>
+      </div>
+      <div class="page-section__col">
+        <app-icon name="product-return" size="2xl"></app-icon>
+        <p class="text text_size_md">Возврат удвоенной стоимости каждого замка в случае брака.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<app-categories-list></app-categories-list>
+<app-products  *appLet="(products$ | async) as products" title="Наши популярные продукты" [list]="products"></app-products>
+

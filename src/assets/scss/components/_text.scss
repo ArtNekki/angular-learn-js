@@ -1,99 +1,89 @@
 .text {
-  display: inline-block;
-  font-style: normal;
-  line-height: 1;
+	margin: 0;
 
-  &_size_sm {
-    font-size: 12px;
-  }
+	&_size_2xl {
+		font-size: 44px;
+		line-height: 62px;
+	}
 
-  //&_size_2xs {
-  //  font-size: 12px;
-  //}
-  //
-  //&_size_xs {
-  //  font-size: 16px;
-  //}
-  //
-  //&_size_sm {
-  //  font-size: 18px;
-  //}
-  //
-  //&_size_md {
-  //  font-size: 22px;
-  //}
-  //
-  //&_size_lg {
-  //  font-size: 24px;
-  //}
+	&_size_xl {
+		font-size: 32px;
+		line-height: 38px;
+	}
 
-  &_screen_lg_size_sm {
-    @include media-breakpoint-up(lg) {
-      font-size: 16px;
-    }
-  }
+	&_size_lg {
+		font-size: 22px;
+		line-height: 34px;
+	}
 
-  &_size_xl {
-    font-size: 32px;
-  }
+	&_size_md {
+		font-size: 20px;
+		line-height: 32px;
+	}
 
-  &_size_2xl {
-    font-size: 44px;
-  }
+	&_size_sm {
+		font-size: 16px;
+		line-height: 26px;
+	}
 
-  // line-height
+	&_size_xs {
+		font-size: 14px;
+		line-height: 24px;
+	}
 
-  &_line-height_2xs {
-    line-height: 20px;
-  }
+	&_size_2xs {
+		font-size: 13px;
+		line-height: 21px;
+	}
 
-  &_line-height_xs {
-    line-height: 26px;
-  }
+	//<------------------------- Weight -------------------------->
 
-  &_line-height_sm {
-    line-height: 28px;
-  }
+	&_weight_thin {
+		font-weight: 300;
+	}
 
-  &_line-height_md {
-    line-height: 32px;
-  }
+	&_weight_regular {
+		font-weight: 400;
+	}
 
-  &_line-height_lg {
-    line-height: 34px;
-  }
+	&_weight_bold {
+		font-weight: 500;
+	}
 
-  &_line-height_xl {
-    line-height: 38px;
-  }
+	&_weight_semi-bold {
+		font-weight: 600;
+	}
 
-  &_line-height_2xl {
-    line-height: 42px;
-  }
+	//<------------------------- Margin bottom -------------------------->
+	&_mgb_4 {
+		margin-bottom: 4px;
+	}
 
-  &_line-height_3xl {
-    line-height: 62px;
-  }
+	&_mgb_16 {
+		margin-bottom: 16px;
+	}
 
-  // font-weight
+	&_mgb_20 {
+		margin-bottom: 20px;
+	}
 
-  &_weight_regular {
-    font-weight: 400;
-  }
+	&_mgb_32 {
+		margin-bottom: 32px;
+	}
 
-  &_weight_medium {
-    font-weight: 500;
-  }
+	&_mgb_56 {
+		margin-bottom: 56px;
+	}
 
-  &_weight_semi-bold {
-    font-weight: 600;
-  }
+	//<------------------------- Type -------------------------->
 
-  &_weight_bold {
-    font-weight: 700;
-  }
+	&_type_stroked {
+		text-decoration: line-through;
+	}
 
-  &_color_white {
-    color: var(--color-text-primary-inverse);
-  }
+	//<------------------------- Align -------------------------->
+
+	&_align_center {
+		text-align: center;
+	}
 }

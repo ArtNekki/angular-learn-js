@@ -1,61 +1,63 @@
 // text
 :root {
-  --color-text-primary: #454f5b;
-  --color-text-primary-inverse: #ffffff;
-  --color-text-secondary: #000000;
-  --color-text-disable: #a4a4a4;
-  --color-text-accent: #4295E4;
+	--color-text-primary: #454f5b;
+	--color-text-primary-inverse: #ffffff;
+	--color-text-secondary: #000000;
+	--color-text-disable: #a4a4a4;
+	--color-text-accent: #4295e4;
 }
 
 //background
 :root {
-  --color-bg-primary: rgba(0, 0, 0, 0.2);
-  --color-bg-secondary: #454F5B;
-  --color-bg-accent: #4295E4;
-  --color-bg-accent-light: #F2F8FF;
-  --color-bg-footer: #0D2436;
+	--color-bg-primary: rgba(0, 0, 0, 0.2);
+	--color-bg-secondary: #454f5b;
+	--color-bg-accent: #4295e4;
+	--color-bg-accent-light: #f2f8ff;
+	--color-bg-footer: #0d2436;
+	--color-bg-white: #ffffff;
 }
 
 //stroke
 :root {
-  --color-stroke: #EAEAEA;
+	--color-stroke: #eaeaea;
 }
 
 //box-shadow
 :root {
-  --box-shadow: 0px 4px 18px -2px rgba(0, 0, 0, 0.1);
+	--box-shadow: 0px 4px 18px -2px rgba(0, 0, 0, 0.1);
 }
 
 //buttons
 :root {
-  --color-button-primary: #4295E4;
-  --color-button-primary-hover: #56A9F8;
-  --color-button-primary-active: #2E81D0;
+	--color-button-primary: #4295e4;
+	--color-button-primary-hover: #56a9f8;
+	--color-button-primary-active: #2e81d0;
 }
 
 //container
 
 :root {
-  --container-padding-x: 15px;
+	--container-padding-x: 15px;
 }
 
 // fonts
 :root {
-  --font-title: "PT Sans", -apple-system, BlinkMacSystemFont, "Ubuntu", "Droid Sans", "Helvetica Neue", "Arial", sans-serif;
-  --font-text: "Roboto", -apple-system, BlinkMacSystemFont, "Ubuntu", "Droid Sans", "Helvetica Neue", "Arial", sans-serif;
+	--font-title: 'PT Sans', -apple-system, BlinkMacSystemFont, 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial',
+		sans-serif;
+	--font-text: 'Roboto', -apple-system, BlinkMacSystemFont, 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial',
+		sans-serif;
 }
 
 // Grid breakpoints
 $grid-breakpoints: (
-  xs: 0,
-  sm: 600px,
-  md: 768px,
-  lg: 900px,
-  xl: 1280px,
-  xxl: 1440px,
-  xxxl: 1920px
+	xs: 0,
+	sm: 600px,
+	md: 768px,
+	lg: 900px,
+	xl: 1280px,
+	xxl: 1440px,
+	xxxl: 1920px,
 ) !default;
 
-@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
-@include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
-
+@include _assert-ascending($grid-breakpoints, '$grid-breakpoints');
+@include _assert-starts-at-zero($grid-breakpoints, '$grid-breakpoints');

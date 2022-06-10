@@ -1,0 +1,13 @@
+<section *appLet="(product$ | async) as product" class="page-section">
+    <div class="page-section__container">
+      <div class="page-section__row">
+        <div class="page-section__col">
+          <img [src]="product.images[0].url" alt="" width="400" height="400">
+        </div>
+        <div class="page-section__col">
+          <h1>{{product.name}}</h1>
+        </div>
+      </div>
+    </div>
+</section>
+

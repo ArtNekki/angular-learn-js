@@ -1,0 +1,31 @@
+<section class="catalog">
+  <div class="catalog__content">
+    <h2 class="text text_size_xl">Накладные электронные замки</h2>
+    <div class="catalog__toolbar">
+      <app-button>Сбросить фильтры</app-button>
+      <select name="" id="">
+        <option value="rating">По популярности</option>
+        <option value="rating">По цене</option>
+      </select>
+    </div>
+    <aside class="catalog__filter">
+
+    </aside>
+    <ng-container *appLet="(products$ | async) as products">
+      <main class="catalog__main" [class.catalog__main_is_loading]="!products.length">
+        <ng-container *ngIf="products.length; else loading">
+          <app-product-card *ngFor="let product of products" [data]="product"></app-product-card>
+        </ng-container>
+        <ng-template #loading>
+          <app-loader></app-loader>
+        </ng-template>
+      </main>
+    </ng-container>
+  </div>
+</section>
+
+<div class="page-section">
+  <div class="page-section__container">
+    <app-products *appLet="(productsLastSeen$ | async) as products" title="Вы недавно просмотрели" [list]="products"></app-products>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+.page-section_type_categories {
+	.page-section__row {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 40px;
+		align-content: stretch;
+	}
+}

@@ -1,0 +1,100 @@
+@import 'src/assets/scss/core/functions';
+@import 'src/assets/scss/core/breakpoints';
+@import 'src/assets/scss/core/mixins';
+@import 'src/assets/scss/settings';
+
+.link {
+	@include clear-link-outline();
+
+	position: relative;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 30px;
+	letter-spacing: -0.16px;
+	color: var(--color-text-primary-inverse);
+	text-decoration: none;
+	cursor: pointer;
+
+	@-moz-document url-prefix() {
+		&::before {
+			bottom: -5px;
+		}
+	}
+
+	span {
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: -4px;
+			width: 100%;
+			height: 1px;
+			background-color: var(--color-text-secondary);
+			opacity: 0;
+			transition: background-color 0.3s;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	&_color_purple {
+		color: var(--color-text-purple);
+
+		span::before {
+			background-color: var(--color-text-purple);
+		}
+	}
+
+	&_color_pink {
+		color: var(--color-text-pink);
+
+		span::before {
+			background-color: var(--color-text-pink);
+		}
+	}
+
+	&_color_blue {
+		color: var(--color-text-blue);
+
+		span::before {
+			background-color: var(--color-text-blue);
+		}
+	}
+
+	&_size_sm {
+		font-size: 12.4px;
+		line-height: 15px;
+		font-weight: 400;
+		letter-spacing: 0.065px;
+
+		span::before {
+			bottom: -3px;
+		}
+	}
+
+	&_in_footer {
+		line-height: 32px;
+	}
+
+	&_in_text {
+		font-family: inherit;
+		font-size: inherit;
+		font-weight: 500;
+		line-height: inherit;
+		letter-spacing: inherit;
+	}
+
+	&_with_icon {
+		text-transform: uppercase;
+
+		::ng-deep svg {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+}
